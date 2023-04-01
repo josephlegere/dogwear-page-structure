@@ -2,7 +2,7 @@
   "name": "dogwear-page-structure",
   "version": "1.0.0",
   "private": true,
-  "description": "localization-redirects",
+  "description": "A simple representation of the implementation of the page structure of the Non-stop Dogwear website.",
   "author": "Joseledgy",
   "keywords": [
     "gatsby"

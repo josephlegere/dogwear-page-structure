@@ -11,17 +11,31 @@ export const createPages: GatsbyNode["createPages"] = async ({
 }) => {
   const { createPage, createRedirect } = actions
 
+  createPage({
+    path: '/',
+    component: path.resolve("./src/templates/home.tsx"),
+    context: {
+      locale: locales[0],
+      hreflang: locales.map((loc) => ({
+        locale: loc.hreflang,
+        subFolder: loc.subFolder,
+        url: `/${loc.subFolder}/`
+      }))
+    }
+  })
+
   locales.map((locale) => {
     const { languageCode, subFolder } = locale
 
     // Home Page
     try {
       const url = `${subFolder}/`
-      const hreflang: hreflangType[] = locales.map((loc) => ({
-            locale: loc.hreflang,
-            subFolder: loc.subFolder,
-            url: `/${loc.subFolder}/`
-          }))
+      const hreflang: hreflangType[] =
+        locales.map((loc) => ({
+          locale: loc.hreflang,
+          subFolder: loc.subFolder,
+          url: `/${loc.subFolder}/`
+        }))
 
       createPage({
         path: url,

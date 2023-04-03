@@ -12,6 +12,7 @@ interface localeType {
 
 interface pageParamType {
   data: any
+  location: any
   pageContext: {
     locale: localeType
     hreflang: hreflangType

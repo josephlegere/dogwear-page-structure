@@ -34,10 +34,11 @@ export const createPages: GatsbyNode["createPages"] = async ({
       })
 
       createRedirect({
-        fromPath: `/`,
-        toPath: `/${subFolder}/`,
-        isPermanent: true,
-        conditions: { language: languageCode },
+        fromPath: `/defense`,
+        toPath: `https://www.nonstopdefense.com`,
+        redirectInBrowser: true,
+        statusCode: 200,
+        // conditions: { language: languageCode },
       })
     } catch (error) {
       console.error(`Failed to generate home page : ${error}`)

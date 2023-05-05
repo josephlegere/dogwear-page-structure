@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 
-export default function HomePage({ data, pageContext }: pageParamType) {
+export default function HomePage({ data, pageContext }) {
 
   const { locale } = pageContext
 
@@ -12,7 +12,7 @@ export default function HomePage({ data, pageContext }: pageParamType) {
   )
 }
 
-export const Head = ({ data, pageContext }: pageParamType) => {
+export const Head = ({ data, pageContext }) => {
 
   const { locale } = pageContext
 

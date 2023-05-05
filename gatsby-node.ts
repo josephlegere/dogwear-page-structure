@@ -26,7 +26,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
       createPage({
         path: url,
-        component: path.resolve("./src/templates/home.tsx"),
+        component: path.resolve("./src/templates/home.jsx"),
         context: {
           locale,
           hreflang

@@ -26,7 +26,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
       createPage({
         path: url,
-        component: path.resolve("./src/templates/home.tsx"),
+        component: path.resolve("./src/templates/home.jsx"),
         context: {
           locale,
           hreflang
@@ -34,10 +34,11 @@ export const createPages: GatsbyNode["createPages"] = async ({
       })
 
       createRedirect({
-        fromPath: `/`,
-        toPath: `/${subFolder}/`,
-        isPermanent: true,
-        conditions: { language: languageCode },
+        fromPath: `/defense`,
+        toPath: `https://www.nonstopdefense.com`,
+        redirectInBrowser: true,
+        statusCode: 200,
+        // conditions: { language: languageCode },
       })
     } catch (error) {
       console.error(`Failed to generate home page : ${error}`)
